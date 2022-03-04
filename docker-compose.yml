@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  prod:
+    container_name: craftnote-robot-dev
+    restart: always
+    build: 
+      context: .
+      target: dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/usr/src/app
